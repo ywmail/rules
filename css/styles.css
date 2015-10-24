@@ -1,0 +1,251 @@
+/* (Use different panel colors as available http://bootswatch.com/cerulean/)
+ * Color list for different types of rules
+ * 1. Redirect Rule: #73a839
+*/
+body {
+  background: #ededeb;
+}
+
+a:hover {
+  color: inherit;
+  text-decoration: none;
+}
+
+select {
+  padding: 6px 12px;
+  font-size: 14px;
+  font-weight: normal;
+  line-height: 1;
+  color: #555;
+  text-align: center;
+  background-color: #eee;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+table {
+  width: 100%;
+}
+
+.glyphicon {
+  cursor: pointer;
+}
+
+.header {
+  background: #2F416E;
+  height: 35px;
+  line-height: 35px;
+  font-size: 14px;
+  text-align: center;
+  color: #eee;
+}
+
+.page {
+  position: fixed;
+  top: 35px;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.content {
+  width: 800px;
+  height: calc(100% - 35px);
+  margin: auto;
+  background: #fff;
+  overflow: auto;
+}
+
+.backdrop {
+  display: none;
+  background: #ccc;
+  opacity: 0.65;
+  top: 3.5rem;
+  bottom: 3.5rem;
+}
+
+.backdrop-message {
+  display: none;
+  width: 50rem;
+  left: 50%;
+  position: absolute;
+  margin-left: -25rem;
+  top: 40%;
+  z-index: 1050;
+  text-align: center;
+}
+
+.footer {
+  width: 800px;
+  margin: auto;
+  overflow: hidden;
+  text-align: center;
+  height: 35px;
+  line-height: 35px;
+  background: #3c3c3c;
+  color: #eee;
+}
+
+.footer .rq-blue {
+  margin: 0;
+}
+
+.footer-title {
+  font-weight: bolder;
+  font-size: 16px;
+  color: #fff;
+  background: green;
+  padding: 5px 0 5px 8px;
+  margin-right: 5px;
+  border-radius: 2px;
+}
+
+.rq-banner {
+  padding: 0 50px 0 10px;
+  color: #fff;
+  font-weight: 700;
+  z-index: 10;
+  margin-left: 10px;
+}
+
+#forkme_banner {
+  background: url('/resources/images/blacktocat.png') #0090ff no-repeat 95% 50%;
+  border-radius: 2px;
+  padding: 0 50px 0 10px;
+  position: fixed;
+  right: 0;
+}
+
+#chromestore_banner {
+  background: url('/resources/images/chrome_icon.png') #53a93f no-repeat 95% 50%;
+  background-size: 30px;
+  padding: 10px 50px 10px 10px;
+}
+
+.right {
+  float: right;
+}
+
+.dropdown-container {
+  padding-bottom: 10px;
+  display: inline-block;
+}
+
+.input-group {
+  padding: 10px 0;
+}
+
+.icon-requestly {
+  height: 30px;
+  position: relative;
+  top: -3px;
+}
+
+.rq-white {
+  color: white;
+  font-size: 18px;
+  text-shadow: 0 0 1px;
+}
+
+.rq-blue {
+  color: #3DA4DF;
+  margin-left: -4px;
+  font-weight: bold;
+  font-size: 18px;
+  text-shadow: 0 0 1px;
+  font-family: monospace;
+  letter-spacing: -2px;
+}
+
+#rq-notifier {
+  border-radius: 2px;
+  color: whitesmoke;
+  font-weight: bold;
+  position: fixed;
+  padding: 8px;
+  z-index: 100;
+  text-align: center;
+  width: 100%;
+}
+
+.rq-success {
+  background-color: #3c763d;
+}
+
+.rq-error {
+  background-color: #a94442;
+}
+
+.rq-info {
+  background-color: #31708f;
+}
+
+.rq-notice {
+  background-color: #DF731F;
+}
+
+.content-header {
+  padding: 10px;
+  color: white;
+  font-size: 14px;
+}
+
+.rq-green {
+  background: #5B9027;
+}
+
+.rq-dimgrey {
+  background: dimgrey;
+}
+
+.content .rule-body {
+  padding: 16px;
+}
+
+.margin-r-0-5 {
+  margin-right: 0.5rem;
+}
+
+/* customization of bootstrap toggle component */
+.toggle {
+  min-height: 1rem !important;
+  min-width: 1rem !important;
+  width: 80px !important;
+  height: 25px !important;
+  background-color: #adadad !important;
+  border-color: #adadad !important;
+}
+
+.toggle-group label {
+  padding-top: 1px;
+  padding-bottom: 0;
+}
+
+.toggle-group .toggle-off.btn {
+  padding-left: 20px;
+}
+
+.toggle-group .toggle-on.btn {
+  padding-right: 20px;
+}
+
+#redirect-rule-editor .toggle-on.btn,
+.redirect .status-cell .toggle-on.btn {
+  background-color: #5B9027;
+}
+
+#cancel-rule-editor .toggle-on.btn,
+.cancel .status-cell .toggle-on.btn {
+  background-color: #d32a0e;
+}
+
+.replace .status-cell .toggle-on.btn,
+.status-toggle.replace + .toggle-group .toggle-on.btn {
+  background-color: #2A95E7;
+}
+
+.headers .status-cell .toggle-on.btn,
+.status-toggle.headers + .toggle-group .toggle-on.btn {
+  background-color: #dd9d12;
+}

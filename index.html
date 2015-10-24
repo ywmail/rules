@@ -1,0 +1,303 @@
+<html>
+  <head>
+    <title>Requestly - Play with Network Calls</title>
+    <link href="/libs/css/bootstrap.css" rel="stylesheet">
+    <link href="/libs/css/bootstrap-toggle.min.css" rel="stylesheet">
+    <link href="/css/styles.css" rel="stylesheet">
+    <link href="/css/index.css" rel="stylesheet">
+    <link href="/css/editor.css" rel="stylesheet">
+    <link href="/css/redirect_rule.css" rel="stylesheet">
+    <link href="/css/cancel_rule.css" rel="stylesheet">
+    <link href="/css/replace_rule.css" rel="stylesheet">
+    <link href="/css/headers_rule.css" rel="stylesheet">
+    <link href="/css/rule_cards.css" rel="stylesheet">
+  </head>
+  <body>
+    <!-------------------------------- Replace Rule Editor Template ------------------------------------->
+    <script type="text/template" id="replace-rule-editor-template">
+      <nav class="content-header">
+        <a href="#selectRule" role="button" class="back-button glyphicon glyphicon-share-alt" aria-hidden="true" title="Go Back"></a>
+        <span>Replace Host or some part of URL</span>
+      </nav>
+      <section class="rule-body">
+        <div class="name-status-container">
+          <div class="input-group name-container">
+            <span class="input-group-addon">Rule Name</span>
+            <input type="text" class="form-control rule-name-input" placeholder="" value="<%=rule.getName()%>">
+          </div>
+
+          <% var status = rule.getStatus() %>
+          <div class="rule-status-container">
+            <span class="title margin-r-0-5">Status</span>
+            <span title="Click to toggle Rule Status">
+              <input type="checkbox" data-toggle="toggle" class="status-toggle replace"
+                data-on="<%= RQ.RULE_STATUS.ACTIVE %>" data-off="<%= RQ.RULE_STATUS.INACTIVE %>"
+                <% if (status === RQ.RULE_STATUS.ACTIVE) {%> checked <%}%> />
+            </span>
+          </div>
+        </div>
+
+        <div class="description-container">
+          <div class="title">Rule Description (Optional)</div>
+          <textarea class="rule-description"
+                    placeholder="e.g. Replace http://evilsite.com with http://goodsite.com in all URLs"><%=rule.getDescription()%></textarea>
+        </div>
+
+        <div class="pairs-container">
+          <div class="title">
+            <span class="left">Pairs</span>
+            <button class="right btn add-pair">
+              <span class="glyphicon glyphicon-plus-sign action-icon"></span>
+              <span>New</span>
+            </button>
+            </div>
+          <div class="well well-sm">
+            <% var pairs = rule.getPairs();
+            _.each(pairs, function(pair, index) {
+              var from = pair.from,
+                to = pair.to; %>
+              <div class="pair-container" data-index="<%=index%>">
+                <div class="input-group">
+                  <span class="input-group-addon">Replace</span>
+                  <input type="text" class="form-control from-input" data-key="from"
+                         placeholder="This part in URL" value="<%=from%>">
+                </div>
+                <div class="input-group">
+                  <span class="input-group-addon">With</span>
+                  <input type="text" class="form-control to-input" data-key="to"
+                         placeholder="Will be replaced by this string" value="<%=to%>">
+                </div>
+                <span class="glyphicon glyphicon-trash delete-pair action-icon"></span>
+              </div>
+            <% }); %>
+          </div>
+        </div>
+
+        <div class="buttons-container">
+          <a class="btn save-button save-rule">Save</a>
+          <a href="#" class="btn btn-default">Cancel</a>
+        </div>
+      </section>
+    </script>
+    <!----------------------End of Replace Rule Editor Template------------------------------------------------>
+
+    <!-------------------------------- Headers Rule Editor Template ------------------------------------->
+    <script type="text/template" id="headers-editor-template">
+      <nav class="content-header">
+        <a href="#selectRule" role="button" class="back-button glyphicon glyphicon-share-alt" aria-hidden="true" title="Go Back"></a>
+        <span>Modify Headers in HTTP Request and Response</span>
+      </nav>
+      <section class="rule-body">
+        <div class="alert alert-dismissable alert-warning message">
+          <button type="button" class="close hide-message" data-dismiss="alert">x</button>
+          <p>Modifications in Response Headers are not visible in Dev tools.
+            <a href="https://code.google.com/p/chromium/issues/detail?id=258064" class="alert-link" target="_blank">Chromium Bug Link</a>
+          </p>
+        </div>
+
+        <div class="name-status-container">
+          <div class="input-group name-container">
+            <span class="input-group-addon">Rule Name</span>
+            <input type="text" class="form-control rule-name-input" placeholder="" value="<%=rule.getName()%>">
+          </div>
+
+          <% var status = rule.getStatus() %>
+          <div class="rule-status-container">
+            <span class="title margin-r-0-5">Status</span>
+            <span title="Click to toggle Rule Status">
+              <input type="checkbox" data-toggle="toggle" class="status-toggle headers"
+                data-on="<%= RQ.RULE_STATUS.ACTIVE %>" data-off="<%= RQ.RULE_STATUS.INACTIVE %>"
+                <% if (status === RQ.RULE_STATUS.ACTIVE) {%> checked <%}%> />
+            </span>
+          </div>
+        </div>
+
+        <div class="description-container">
+          <div class="title">Rule Description (Optional)</div>
+          <textarea class="rule-description"
+            placeholder="e.g. Modifying Headers to accept cross domain resources"><%=rule.getDescription()%></textarea>
+        </div>
+
+        <div class="pairs-container">
+          <div class="title">
+            <span class="left">Headers Modification Rules</span>
+            <button class="right btn add-pair">
+              <span class="glyphicon glyphicon-plus-sign action-icon"></span>
+              <span>New</span>
+            </button>
+          </div>
+          <div class="well well-sm">
+            <% var pairs = rule.getPairs();
+            _.each(pairs, function(pair, index) {
+            var type = pair.type,
+              target = pair.target,
+              header = pair.header,
+              value = pair.value,
+              source = pair.source,
+              sourceOperator = source.operator,
+              sourceValue = source.value ; %>
+
+            <% if (index > 0) { %> <hr /> <% } %>
+
+            <div class="pair-container" data-index="<%=index%>">
+              <div>
+                <div class="header-modification-type-container">
+                  <span class="dropdown-container">
+                    <select class="modification-type-select" data-key="type">
+                      <option value="<%= RQ.MODIFICATION_TYPES.ADD %>"
+                        <% if (type === RQ.MODIFICATION_TYPES.ADD) { %> selected <% } %>>Add</option>
+                      <option value="<%= RQ.MODIFICATION_TYPES.REMOVE %>"
+                        <% if (type === RQ.MODIFICATION_TYPES.REMOVE) { %> selected <% } %>>Remove</option>
+                      <option value="<%= RQ.MODIFICATION_TYPES.MODIFY %>"
+                      <% if (type === RQ.MODIFICATION_TYPES.MODIFY) { %> selected <% } %>>Modify</option>
+                    </select>
+                  </span>
+                </div>
+
+                <div class="header-target-container">
+                  <span class="dropdown-container">
+                    <select class="header-target-select" data-key="target">
+                      <option value="<%= RQ.HEADERS_TARGET.REQUEST %>"
+                      <% if (target === RQ.HEADERS_TARGET.REQUEST) { %> selected <% } %>>Request</option>
+                      <option value="<%= RQ.HEADERS_TARGET.RESPONSE %>"
+                      <% if (target === RQ.HEADERS_TARGET.RESPONSE) { %> selected <% } %>>Response</option>
+                    </select>
+                  </span>
+                </div>
+
+                <div class="input-group">
+                  <span class="input-group-addon">Header</span>
+                  <input type="text" class="form-control header-input" data-key="header"
+                     placeholder="Header Name" value="<%=header%>">
+                </div>
+
+                <% if (type !== RQ.MODIFICATION_TYPES.REMOVE) { %>
+                  <div class="input-group">
+                    <span class="input-group-addon">Value</span>
+                    <input type="text" class="form-control value-input" data-key="value"
+                           placeholder="Header Value" value="<%=value%>"/>
+                  </div>
+                <% } %>
+              </div>
+
+              <div class="source-container">
+                <span class="title">Url</span>
+
+                <div class="dropdown-container">
+                  <select class="source-operator-select" data-key="source.operator">
+                    <option value="<%= RQ.RULE_OPERATORS.EQUALS %>" <% if (sourceOperator === RQ.RULE_OPERATORS.EQUALS) { %> selected <% } %> >
+                    Equals
+                    </option>
+                    <option value="<%= RQ.RULE_OPERATORS.CONTAINS %>" <% if (sourceOperator === RQ.RULE_OPERATORS.CONTAINS) { %> selected <% } %> >
+                    Contains
+                    </option>
+                    <option value="<%= RQ.RULE_OPERATORS.MATCHES %>" <% if (sourceOperator === RQ.RULE_OPERATORS.MATCHES) { %> selected <% } %> >
+                    Matches
+                    </option>
+                  </select>
+                </div>
+
+                <input type="text" class="form-control source-value-input" data-key="source.value" value="<%=sourceValue%>"
+                  placeholder="Leave this field Empty to apply above modification to all urls" />
+
+                <span class="glyphicon glyphicon-trash delete-pair action-icon"></span>
+              </div>
+            </div>
+
+            <% }); %>
+          </div>
+        </div>
+
+        <div class="buttons-container">
+          <a class="btn save-button save-rule">Save</a>
+          <a href="#" class="btn btn-default">Cancel</a>
+        </div>
+      </section>
+    </script>
+    <!----------------------End of Headers Rule Editor Template------------------------------------------------>
+
+    <script type="text/template" id="rule-cards-template">
+      <nav class="content-header rq-dimgrey">
+        <a href="#" role="button" class="back-button glyphicon glyphicon-share-alt" aria-hidden="true" title="Go Back"></a>
+        <span>Select Rule</span>
+      </nav>
+      <section class="rule-body">
+        <div class="panel panel-redirect-rule" data-target="#new/Redirect">
+          <div class="panel-heading">
+            <h3 class="panel-title">
+              <span>Redirect Request</span>
+            </h3>
+          </div>
+          <div class="panel-body">
+            Redirect a request URL
+          </div>
+        </div>
+
+        <div class="panel panel-cancel-rule" data-target="#new/Cancel">
+          <div class="panel-heading">
+            <h3 class="panel-title">
+              <span>Cancel Request</span>
+            </h3>
+          </div>
+          <div class="panel-body">
+            Cancel a request
+          </div>
+        </div>
+
+        <div class="panel panel-replace-rule" data-target="#new/Replace">
+          <div class="panel-heading">
+            <h3 class="panel-title">
+              <span>Replace Host</span>
+            </h3>
+          </div>
+          <div class="panel-body">
+            Replace host name in a URL
+          </div>
+        </div>
+
+        <div class="panel panel-headers-rule" data-target="#new/headers">
+          <div class="panel-heading">
+            <h3 class="panel-title">
+              <span>Modify Headers</span>
+            </h3>
+          </div>
+          <div class="panel-body">
+            Modify HTTP headers in request and response
+          </div>
+        </div>
+      </section>
+    </script>
+
+    <!-- End of templates sections -->
+
+    <div class="header">
+      <img src="/resources/images/38x38.png" class="icon-requestly">
+      <span class="rq-white">Request</span>
+      <span class="rq-blue">ly</span>
+      <span class="rq-dash"> - </span>
+      <span class="rq-line">Play with Network Requests</span>
+	  <a id="forkme_banner" class="rq-banner" href="http://bit.ly/requestly-github-repo" target="_blank">View on GitHub</a>
+    </div>
+
+    <div id="page" class="page">
+      <div id="content" class="content"></div>
+      <div id="footer" class="footer">
+        <span class="message">
+          <span class="footer-title">Like It! </span>
+          <span>Please rate</span>
+          <span class="rq-white">Request</span><span class="rq-blue">ly</span>
+          <span> &nbsp;on </span>
+    		  <a id="chromestore_banner" class="rq-banner" href="http://bit.ly/chrome-store-reviews" target="_blank">Google Chrome Store</a>
+        </span>
+      </div>
+    </div>
+
+    <div id="extension-disable-backdrop" class="backdrop modal-backdrop"></div>
+    <div id="extension-disable-backdrop-message" class="backdrop-message alert alert-info">
+      <p>Requestly is deactivated.</p>
+      <p>You can activate it by using Right+Click and hit Activate Requestly</p>
+    </div>
+
+    <!-- Load all scripts here  -->
+  </body>
+</html>

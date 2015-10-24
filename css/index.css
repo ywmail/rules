@@ -1,0 +1,123 @@
+.select-rule-button,
+.export-rules-button,
+.import-rules-button {
+  position: relative;
+  top: -3px;
+  padding: 3px 10px;
+  margin-left: 5px;
+}
+
+.right-corner-icongroup {
+  height: 40px;
+  line-height: 40px;
+  margin-top: -9px;
+}
+
+.settings-button {
+  padding-left: 0.5rem;
+  /* Hide Settings Icon for now */
+  display: none;
+}
+
+.settings-icon {
+  font-size: 1.75rem;
+  color: #ccc;
+}
+
+.rule-index > .table {
+  font-size: 14px;
+}
+
+.rule-index > .table tr:first-child th {
+  border-bottom: 0;
+  background-color: #f5f5f5;
+}
+
+.table > tbody > tr > td {
+  border-bottom: 1px solid #ddd;
+  vertical-align: middle;
+  color: #666;
+}
+
+.ruleName {
+  cursor: pointer;
+  max-width: 30rem;
+  display: inline-block;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.ruleName:hover {
+  text-decoration: none;
+}
+
+.ruleDescription {
+  font-size: 13px;
+  color: #888;
+  font-style: italic;
+  width: 350px;
+  max-width: 350px;
+  word-wrap: break-word;
+}
+
+.status-cell {
+  width: 110px;
+  text-align: center;
+}
+
+.table tr:hover td,
+.table tr.selected td {
+  background-color: #d2e6f5 !important;
+  border-color: #aacdf0 !important;
+}
+
+.action-icon {
+  margin-left: 5px;
+}
+
+/* RuleType Row specific properties */
+.rule-selection-cell {
+  vertical-align: top !important;
+}
+
+.rule-selection-cell input {
+  cursor: pointer;
+}
+
+.rule-name-cell {
+  padding-left: 0 !important;
+}
+
+.rule-item-row .rule-type {
+  border-radius: 50%;
+  vertical-align: top;
+  line-height: 1.5rem;
+  margin-right: 0.5rem;
+  width: 2.1rem;
+  height: 2rem;
+}
+
+.redirect.rule-item-row .rule-type {
+  background-color: #5B9027;
+}
+
+.cancel.rule-item-row .rule-type {
+  background-color: #d32a0e;
+}
+
+.replace.rule-item-row .rule-type {
+  background-color: #2A95E7;
+}
+
+.headers.rule-item-row .rule-type {
+  background-color: #dd9d12;
+}
+
+.content-header > span {
+  font-weight: bold;
+}
+
+.rules-number {
+  background-color: lightseagreen;
+}

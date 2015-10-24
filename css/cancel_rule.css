@@ -1,0 +1,29 @@
+#cancel-rule-editor .content-header {
+  background: #d32a0e;
+  border-color: #b1240c;
+}
+
+#cancel-rule-editor .source-value-input {
+  width: 565px;
+  display: inline-block;
+  margin-left: 10px;
+}
+
+#cancel-rule-editor .dropdown-container {
+  padding-bottom: 0;
+}
+
+#cancel-rule-editor .well-sm {
+  margin-bottom: 10px;
+}
+
+#cancel-rule-editor .pair-container:first-child:last-child .source-value-input {
+  width: 605px;
+}
+
+#cancel-rule-editor .save-button {
+  background: #d32a0e;
+  border-color: #b1240c;
+  color: white;
+}
+

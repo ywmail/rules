@@ -1,0 +1,60 @@
+.panel {
+  width: 360px;
+  display: inline-block;
+  margin: 10px;
+  border-radius: 0;
+  cursor: pointer;
+}
+
+.panel:hover {
+  background-color: #d2e6f5 !important;
+}
+
+.panel > .panel-heading {
+  color: #fff;
+  padding: 10px;
+  border-radius: 0;
+}
+
+.panel-redirect-rule {
+  border-color: #5B9027;
+}
+
+.panel-redirect-rule > .panel-heading {
+  background-color: #5B9027;
+  border-color: #5B9027;
+}
+
+.panel-cancel-rule {
+  border-color: #b1240c;
+}
+.panel-cancel-rule > .panel-heading {
+  background-color: #d32a0e;
+  border-color: #b1240c;
+}
+
+.panel-replace-rule {
+  border-color: #2A95E7;
+}
+
+.panel-replace-rule > .panel-heading {
+  background-color: #2A95E7;
+  border-color: #2A95E7;
+}
+
+.panel-headers-rule {
+  border-color: #dd9d12;
+}
+
+.panel-headers-rule > .panel-heading {
+  background-color: #dd9d12;
+  border-color: #dd9d12;
+}
+
+.back-button {
+  transform: scaleX(-1); /* reverse icon not available in bootstrap glyphicon library */
+  margin-right: 0.5rem;
+  color: white;
+  text-decoration: none !important;
+  padding: 0 0.5rem;
+}

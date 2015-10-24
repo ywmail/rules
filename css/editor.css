@@ -1,0 +1,50 @@
+.name-status-container {
+  height: 6rem;
+}
+
+.name-container {
+  width: 590px;
+  float: left;
+}
+
+.rule-status-container {
+  display: inline-block;
+  height: 54px;
+  line-height: 54px;
+  padding: 0 10px;
+  text-align: right;
+  float: right;
+}
+
+.description-container {
+  padding-bottom: 10px;
+}
+
+.title {
+  padding: 5px 0;
+  color: #555;
+}
+
+.rule-description {
+  resize: none;
+  height: 100px;
+  width: 100%;
+  margin: 0;
+  border-radius: 2px;
+  padding: 5px;
+}
+
+.pair-container:first-child:last-child .delete-pair {
+  display: none;
+}
+
+.pair-container .input-group {
+  display: inline-table;
+  padding: 10px 5px;
+}
+
+.buttons-container .btn {
+  float: right;
+  border-radius: 2px;
+  margin: 5px;
+}

@@ -1,0 +1,55 @@
+.headers-rule-editor .content-header {
+  background-color: #dd9d12;
+  border-color: #dd9d12;
+}
+
+.headers-rule-editor hr {
+  border-top: 1px solid #ddd;
+  margin-bottom: 5px;
+  margin-top: 5px;
+}
+
+.headers-rule-editor .save-button {
+  background-color: #dd9d12;
+  border-color: #dd9d12;
+  color: white;
+}
+
+.header-modification-type-container {
+  display: inline-block;
+  padding: 2px 5px;
+}
+
+.modification-type-select {
+  padding: 6px 3px;
+}
+
+.header-target-container{
+  display: inline-block;
+  padding: 2px 5px;
+}
+
+.headers-rule-editor .pair-container .title {
+  padding: 10px;
+}
+
+.headers-rule-editor .pair-container .input-group {
+  width: 240px;
+  padding: 0 5px 0 0;
+  top: 12px;
+}
+
+.headers-rule-editor .pair-container:only-child .input-group {
+  width: 255px;
+}
+
+.headers-rule-editor .source-value-input {
+  width: 550px;
+  display: inline-block;
+  margin-left: 5px;
+}
+
+.headers-rule-editor .pair-container:only-child .source-value-input {
+  margin-left: 10px;
+  width: 574px;
+}
