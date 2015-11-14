@@ -298,7 +298,10 @@
       <p>You can activate it by using Right+Click and hit Activate Requestly</p>
     </div>
 
+    <div id="events-observer-placeholder"></div>
+
     <!-- Load all scripts here  -->
+    <script type="text/javascript" src="/libs/jquery-1.9.1.js"></script>
 
     <!-- Google Analytics Script -->
     <script>
@@ -312,11 +315,12 @@
         a.async = 1;
         a.src = g;
         m.parentNode.insertBefore(a, m)
-      })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+      })(window, document, 'script', '/libs/analytics.js', 'ga');
 
       ga('create', 'UA-46800996-7', 'auto');
       // ga('send', 'pageview');
     </script>
 
+    <script type="text/javascript" src="/js/scripts/tracker.js"></script>
   </body>
 </html>
