@@ -1,0 +1,60 @@
+/*********************
+Morphing hamburger icon
+**********************/
+
+.hamburger-menu {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  width: 80px;
+  height: 60px;
+  cursor: pointer;
+  transition: all 600ms cubic-bezier(0.23, 1, 0.32, 1);
+}
+.hamburger-menu.animate {
+  transform: rotate(180deg);
+}
+
+.bar,
+.bar:after,
+.bar:before {
+  width: 80px;
+  height: 10px;
+}
+
+.bar {
+  position: relative;
+  transform: translateY(25px);
+  background: white;
+}
+ 
+.bar:before {
+  content: "";
+  position: absolute;
+  right: 0;
+  bottom: 25px;
+  background: white;
+  transition: all 600ms cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.bar:after {
+  content: "";
+  position: absolute;
+  right: 0;
+  top: 25px;
+  background: white;
+  transition: all 600ms cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.bar.animate:after {
+  width: 50px;
+  transform: rotate(-45deg) translateX(15px);
+}
+
+.bar.animate:before {
+  width: 50px;
+  transform: rotate(45deg) translateX(15px);
+}

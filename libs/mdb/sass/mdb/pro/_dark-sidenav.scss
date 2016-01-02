@@ -1,0 +1,83 @@
+/*********************
+  SIDENAV VARIATIONS
+**********************/
+
+// Dark SideNav
+.dark-side-nav {
+    background-color: $elegant-color-dark;
+    li {
+        &:hover,
+        &.active {
+            background-color: $elegant-color;
+        }
+    }
+    .collapsible-body a:active {
+        color: #fff;
+    }
+    .logo-wrapper {
+        padding: 40px 22px 40px 17px;
+        background-color: $elegant-color;
+        border-bottom: 1px solid #616161;
+    }
+    a {
+        color: #fff;
+        font-weight: 300;
+        &:hover,
+        &.active {
+            color: #fff;
+        }
+    }
+    li {
+        background-color: $elegant-color-dark;
+    }
+}
+ 
+// Personal SideNav
+.side-nav .avatar-bg {
+    background-image: url();
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-bottom: 1px solid #bdbdbd;
+    a {
+        height: 100%;
+        padding-left: 5%;
+        padding-right: 5%;
+    }
+    .avatar-wrapper {
+        padding: 40px 60px 40px 60px;
+    }
+    img {
+        border: 4px solid #fff;
+    }
+}
+ 
+.side-nav {
+    .about-me {
+        
+        padding: 10px;
+        color: #fff;
+        font-size: 16px;
+        line-height: 1.5;
+        background-color: lighten( #212121, 5%);
+        border-bottom: 1px solid #424242;
+        h5 {
+            font-size: 17px;
+            line-height: 1.5;
+            font-weight: 300;
+        }
+        h4 {
+            font-size: 25px;
+            font-weight: 300;
+        }
+    }
+    .social {
+        a {
+            padding-left: 15px;
+        }
+        color: #fff;
+        border-bottom: 1px solid #424242;
+        h5 {
+            font-size: 20px;
+        }
+    }
+}

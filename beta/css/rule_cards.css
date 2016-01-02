@@ -1,0 +1,51 @@
+.rule-card {
+  cursor: pointer;
+}
+.rule-card .card-avatar-content {
+  font-size: 90px;
+  line-height: 110px;
+  text-align: center;
+  color: white;
+  border: 5px solid #fff;
+  width: 100%;
+}
+.rule-card .card-content i {
+  margin-right: 5px;
+}
+
+.card-redirect-rule .card-up {
+  background-color: #5b9027;
+}
+.card-redirect-rule .card-avatar-content {
+  background: #5b9027;
+}
+
+.card-cancel-rule .card-up {
+  background-color: #d32a0e;
+}
+.card-cancel-rule .card-avatar-content {
+  background: #d32a0e;
+}
+
+.card-replace-rule .card-up {
+  background-color: #2aa5E7;
+}
+.card-replace-rule .card-avatar-content {
+  background: #2aa5E7;
+}
+
+.card-headers-rule .card-up {
+  background-color: #dd9d12;
+}
+.card-headers-rule .card-avatar-content {
+  background: #dd9d12;
+}
+
+.back-button {
+  padding: 0 0.5rem;
+  color: white;
+  text-decoration: none !important;
+  font-size: 14px;
+}
+
+/*# sourceMappingURL=rule_cards.css.map */

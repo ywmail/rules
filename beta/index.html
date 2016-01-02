@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Requestly - Play with Network Requests</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" type="image/x-icon" href="/favicon.ico"/>
+    
+    <!-- Material Design Icons -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    
+    <!-- Material Design Icons -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+
+    <!-- Bootstrap core CSS -->
+    <link href="/libs/mdb/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Material Design Bootstrap -->
+    <link href="/libs/mdb/css/mdb.css" rel="stylesheet">
+
+    <!-- Code Specific CSS files -->
+    <link href="/libs/css/bootstrap-toggle.min.css" rel="stylesheet">
+    
+    <!-- To Be moved to root directory later -->
+    <link href="/beta/css/styles.css" rel="stylesheet">
+    <link href="/beta/css/index.css" rel="stylesheet">
+    <link href="/beta/css/editor.css" rel="stylesheet">
+    <link href="/beta/css/redirect_rule.css" rel="stylesheet">
+    <link href="/beta/css/cancel_rule.css" rel="stylesheet">
+    <link href="/beta/css/replace_rule.css" rel="stylesheet">
+    <link href="/beta/css/headers_rule.css" rel="stylesheet">
+    <link href="/beta/css/rule_cards.css" rel="stylesheet">
+  </head>
+  <body>
+
+    <!-- Left Navigation Bar -->
+    <ul id="slide-out" class="side-nav fixed">
+
+      <a class="product-name">Requestly</a>
+
+      <!-- Logo -->
+      <a href="#" class="waves-effect waves-light avatar-wrapper">
+          <img src="/resources/images/site-logo.png" class="img-responsive img-circle">
+      </a>
+
+      <a class="product-moto">Play with Network Requests</a>
+
+      <!-- Social Icons -->
+      <div class="social-sec">
+          <ul class="list-inline text-center">
+              <li><a class="btn-floating btn-small fb-bg waves-effect waves-light" href="https://www.facebook.com/sharer/sharer.php?u=https://chrome.google.com/webstore/detail/requestly/mdnleldcmiljblolnjhpnblkcekpdkpa&t=Requestly%3A%20Play%20With%20Network%20Requests" onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=350,width=480');return false;">
+                <i class="fa fa-facebook"></i>
+                </a></li>
+              
+              <li>
+                <a class="btn-floating btn-small tw-bg waves-effect waves-light" href="https://twitter.com/share?url=https://chrome.google.com/webstore/detail/requestly/mdnleldcmiljblolnjhpnblkcekpdkpa&text=Requestly%3A%20Play%20With%20Network%20Requests"
+                 onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=300,width=600');return false;"><i class="fa fa-twitter"> </i></a></li>
+
+              <li><a class="btn-floating btn-small gplus-bg waves-effect waves-light" href="https://plus.google.com/share?url=https://chrome.google.com/webstore/detail/requestly/mdnleldcmiljblolnjhpnblkcekpdkpa" onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=350,width=500');return false;"><i class="fa fa-google-plus"> </i></a></li>
+          </ul>
+      </div>
+
+      <!-- Side Navigation Links -->
+      <ul class="collapsible collapsible-accordion">
+          <li><a class="collapsible-header waves-effect" href="#">
+            <i class="fa fa-home"></i>Rules</a>
+          </li>
+
+          <li class=""><a class="collapsible-header waves-effect" href="http://requestly.in" target="_blank">
+            <i class="fa fa-book"></i>Blog</a>
+          </li>
+
+          <li class="">
+            <a class="collapsible-header waves-effect" href="http://bit.ly/requestly-github-repo" target="_blank">
+              <i class="fa fa-github"></i>Source Code</a>
+          </li>
+
+          <li class="">
+            <a class="collapsible-header waves-effect" href="http://bit.ly/chrome-store-reviews" target="_blank">
+              <i class="fa fa-chrome"></i>Rate Us</a>
+          </li>
+      </ul>
+    </ul>
+    <!-- End of Left Navigation -->
+    
+    <div id="page" class="page">
+
+      <!--<div class="header">
+        <img src="/resources/images/38x38.png" class="icon-requestly">
+        <span class="rq-white">Request</span>
+        <span class="rq-blue">ly</span>
+        <span class="rq-dash"> - </span>
+        <span class="rq-line">Play with Network Requests</span>
+      </div>-->
+
+      <div id="content" class="content"></div>
+      <div id="footer" class="footer">
+        <span class="message">
+          <span class="label label-primary footer-title">Update</span>
+          <span>Activate/Deactivate Option has been removed from Chrome Context Menu.</span>
+          <a href="http://requestly.in/articles/introducing-activate-deactivate-feature/" 
+            target="_blank">Read More Here</a>
+        </span>
+      </div>
+    </div>
+
+    <div id="extension-disable-backdrop" class="backdrop modal-backdrop"></div>
+    <div id="extension-disable-backdrop-message" class="backdrop-message alert alert-info">
+      <p>Requestly is deactivated.</p>
+      <p>You can activate it by using Right+Click on requestly icon in toolbar and hit Activate Requestly</p>
+    </div>
+
+    <div id="events-observer-placeholder"></div>
+
+    <!-- Google Analytics Script -->
+    <script>
+      (function(i, s, o, g, r, a, m) {
+        i['GoogleAnalyticsObject'] = r;
+        i[r] = i[r] || function() {
+            (i[r].q = i[r].q || []).push(arguments)
+        }, i[r].l = 1 * new Date();
+        a = s.createElement(o),
+            m = s.getElementsByTagName(o)[0];
+        a.async = 1;
+        a.src = g;
+        m.parentNode.insertBefore(a, m)
+      })(window, document, 'script', '/libs/analytics.js', 'ga');
+
+      ga('create', 'UA-46800996-7', 'auto');
+      // ga('send', 'pageview');
+    </script>
+
+    <script type="text/javascript" src="/js/scripts/tracker.js"></script>
+  </body>
+</html>
