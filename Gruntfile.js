@@ -14,14 +14,14 @@ module.exports = function (grunt) {
           style: 'expanded'
         },
         files: {                         
-          'beta/css/index.css': 'sass/index.scss',
-          'beta/css/rule_cards.css': 'sass/rule_cards.scss',
-          'beta/css/editor.css': 'sass/editor.scss',
-          'beta/css/styles.css': 'sass/styles.scss',
-          'beta/css/redirect_rule.css': 'sass/redirect_rule.scss',
-          'beta/css/cancel_rule.css': 'sass/cancel_rule.scss',
-          'beta/css/replace_rule.css': 'sass/replace_rule.scss',
-          'beta/css/headers_rule.css': 'sass/headers_rule.scss'
+          'css/index.css': 'sass/index.scss',
+          'css/rule_cards.css': 'sass/rule_cards.scss',
+          'css/editor.css': 'sass/editor.scss',
+          'css/styles.css': 'sass/styles.scss',
+          'css/redirect_rule.css': 'sass/redirect_rule.scss',
+          'css/cancel_rule.css': 'sass/cancel_rule.scss',
+          'css/replace_rule.css': 'sass/replace_rule.scss',
+          'css/headers_rule.css': 'sass/headers_rule.scss'
         }
       }
     },
