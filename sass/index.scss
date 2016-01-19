@@ -1,25 +1,29 @@
+@import 'variables';
+
 .right-corner-icongroup {
   height: 40px;
   line-height: 40px;
   margin-top: -9px;
-}
-.right-corner-icongroup .btn-floating.select-rule-button,
-.right-corner-icongroup .btn-floating.export-rules-button,
-.right-corner-icongroup .btn-floating.import-rules-button {
-  height: 35px;
-  width: 35px;
-  margin-top: 3px;
-  margin-right: 10px;
-  margin-left: 0px;
-}
-.right-corner-icongroup a:last-child {
-  margin-right: 0;
+
+  .btn-floating.select-rule-button,
+  .btn-floating.export-rules-button,
+  .btn-floating.import-rules-button {
+    height: 35px;
+    width: 35px;
+    margin-top: 3px;
+    margin-right: 10px;
+    margin-left: 0px;
+  }
+
+  a:last-child {
+    margin-right: 0;
+  }
 }
 
 .btn-floating.select-rule-button i,
 .btn-floating.export-rules-button i,
 .btn-floating.import-rules-button i {
-  margin-top: 0 !important;
+  margin-top: 0 !important; 
 }
 
 .settings-button {
@@ -97,7 +101,7 @@ input[type="checkbox"].filled-in + label {
   line-height: 18px;
   margin-bottom: 0;
   height: 18px;
-  width: 18px;
+  width: 18px;  
 }
 
 input[type="checkbox"].filled-in:not(:checked) + label:after {
@@ -108,7 +112,7 @@ input[type="checkbox"].filled-in:not(:checked) + label:after {
 
 .filled-in:checked + label:after {
   background-color: #4285F4 !important;
-  border-color: #4285F4 !important;
+  border-color: #4285F4 !important; 
 }
 
 .rule-badge-cell {
@@ -125,19 +129,19 @@ input[type="checkbox"].filled-in:not(:checked) + label:after {
 }
 
 .redirect.rule-item-row .rule-type {
-  background-color: #5b9027;
+  background-color: $redirect-rule-color;
 }
 
 .cancel.rule-item-row .rule-type {
-  background-color: #d32a0e;
+  background-color: $cancel-rule-color;
 }
 
 .replace.rule-item-row .rule-type {
-  background-color: #2aa5E7;
+  background-color: $replace-rule-color;
 }
 
 .headers.rule-item-row .rule-type {
-  background-color: #dd9d12;
+  background-color: $headers-rule-color;
 }
 
 .content-header > span {
@@ -151,10 +155,8 @@ input[type="checkbox"].filled-in:not(:checked) + label:after {
 .rules-number {
   background-color: #4285F4;
   border-radius: 0;
-  height: 25px; /* 20px */
+  height: 25px;
   width: 25px;
-  line-height: 20px; /* 15px */
+  line-height: 20px;
   padding-left: 5px;
 }
-
-/*# sourceMappingURL=index.css.map */

@@ -1,33 +1,23 @@
-.replace-rule-editor .content-header {
-  background-color: #2A95E7;
-  border-color: #2A95E7;
+#replace-rule-editor .pair-container:first-child:last-child > div {
+  width: 49%;
 }
-
-.replace-rule-editor .save-button {
-  background-color: #2A95E7;
-  border-color: #2A95E7;
-  color: white;
+#replace-rule-editor .pair-container > div {
+  width: 48%;
 }
-
-#replace-rule-editor .pair-container:first-child:last-child .input-group {
-  width: 370px;
+#replace-rule-editor label.active {
+  margin-right: 5px;
 }
-
-#replace-rule-editor .pair-container .input-group {
-  width: 350px;
+#replace-rule-editor .from-input-group {
+  margin-right: 5px;
 }
-
-.replace-rule-editor .delete-pair {
+#replace-rule-editor .from-input,
+#replace-rule-editor .to-input {
+  padding: 0;
+  padding-left: 5px;
+}
+#replace-rule-editor .delete-pair {
   position: relative;
-  top: -10px;
+  top: -12px;
 }
 
-.add-pair {
-  padding: 3px 5px 3px 1px;
-  border-radius: 2px;
-  margin-top: -5px;
-}
-
-.add-pair .action-icon {
-  vertical-align: text-top;
-}
+/*# sourceMappingURL=replace_rule.css.map */

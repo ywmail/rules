@@ -1,26 +1,12 @@
-#redirect-rule-editor .name-container {
-  float: none;
+#redirect-rule-editor {
+  /* Handle width of single pair as in case of more than 1 pairs, scroll becomes visible so width should be less then */
+}
+#redirect-rule-editor .pair-container:only-child .destination-url-input {
+  width: 89%;
+}
+#redirect-rule-editor .destination-url-input {
+  width: 88%;
+  margin-bottom: 0;
 }
 
-#redirect-rule-editor .rule-status-container {
-  padding-right: 0;
-  float: none;
-}
-
-#redirect-rule-editor .pair-container:first-child:last-child .source-value-input {
-  width: 615px;
-}
-
-#redirect-rule-editor .source-value-input {
-  display: inline-block;
-  width: 570px;
-}
-
-#redirect-rule-editor .input-group.destination-container {
-  padding: 0;
-}
-
-#redirect-rule-editor .save-rule {
-  background-color: #5B9027;
-  border-color: #5B9027;
-}
+/*# sourceMappingURL=redirect_rule.css.map */

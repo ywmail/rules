@@ -1,3 +1,5 @@
+@import 'variables';
+
 /* (Use different panel colors as available http://bootswatch.com/cerulean/)
  * Color list for different types of rules
  * 1. Redirect Rule: #73a839
@@ -25,7 +27,7 @@ table {
   }
 
   #content {
-    width: 800px;
+    width: $content-width;
     margin: auto;
   }
 
@@ -41,15 +43,17 @@ table {
     margin: auto;
   }
 }
+
 .dropdown-menu {
   min-width: 100px;
   padding: 0;
-}
-.dropdown-menu a.dropdown-option {
-  padding: 0.5rem;
-  padding-left: 10px;
-  font-size: 14px;
-  color: #333;
+
+  a.dropdown-option {
+    padding: 0.5rem;
+    padding-left: 10px;
+    font-size: 14px;
+    color: #333;
+  }
 }
 
 .btn {
@@ -77,23 +81,25 @@ i.left {
   margin: 0;
 }
 
-input[type="url"].form-control,
-input[type="text"].form-control {
-  display: inline-block;
-  width: 100%;
-  height: 34px;
-  padding: 6px 12px;
-  font-size: 14px;
-  line-height: 1.42857143;
-  color: #555;
-  background-color: #fff;
-  background-image: none;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
-  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
-  -webkit-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
-  transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+input[type="url"],
+input[type="text"] {
+  &.form-control {
+    display: inline-block;
+    width: 100%;
+    height: 34px;
+    padding: 6px 12px;
+    font-size: 14px;
+    line-height: 1.42857143;
+    color: #555;
+    background-color: #fff;
+    background-image: none;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
+    -webkit-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+    transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+  }
 }
 
 .header {
@@ -115,7 +121,7 @@ input[type="text"].form-control {
 
 .content {
   width: 100%;
-  min-width: 800px;
+  min-width: $content-width;
   height: calc(100% - 35px);
   background: #fff;
   overflow: auto;
@@ -140,9 +146,10 @@ input[type="text"].form-control {
   color: white;
   background-color: #222;
   border-color: #333;
-}
-.backdrop-message p {
-  font-size: 16px;
+
+  p {
+    font-size: 16px;
+  }
 }
 
 .footer {
@@ -174,7 +181,7 @@ input[type="text"].form-control {
 }
 
 #forkme_banner {
-  background: url("/resources/images/blacktocat.png") #0090ff no-repeat 95% 50%;
+  background: url('/resources/images/blacktocat.png') #0090ff no-repeat 95% 50%;
   border-radius: 2px;
   padding: 0 50px 0 10px;
   position: fixed;
@@ -182,7 +189,7 @@ input[type="text"].form-control {
 }
 
 #chromestore_banner {
-  background: url("/resources/images/chrome_icon.png") #53a93f no-repeat 95% 50%;
+  background: url('/resources/images/chrome_icon.png') #53a93f no-repeat 95% 50%;
   background-size: 30px;
   padding: 10px 50px 10px 10px;
 }
@@ -318,41 +325,46 @@ input[type="text"].form-control {
 }
 
 /* Left Navigation Bar */
-.side-nav a.product-name {
-  padding-top: 10px;
-  padding-bottom: 10px;
-  height: 45px;
-  background: dimgrey;
-  text-align: center;
-  padding-left: 0px;
-  font-size: 15px;
-  font-weight: bold;
-  color: #fff;
-  line-height: 25px;
-  cursor: default;
-}
-.side-nav .avatar-wrapper {
-  padding: 40px;
-  background: #ccc;
-  cursor: default;
-}
-.side-nav a.product-moto {
-  position: absolute;
-  top: 235px;
-  z-index: 2;
-  color: #333;
-  text-shadow: 0 0 2px #fff;
-}
-.side-nav li {
-  border-top: 1px solid #eee;
-}
-.side-nav a {
-  height: 34px;
-  line-height: 34px;
-  color: #555555;
-}
-.side-nav i {
-  margin-right: 10px;
-}
+.side-nav {
+  a.product-name {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    height: 45px;
+    background: dimgrey;
+    text-align: center;
+    padding-left: 0px;
+    font-size: 15px;
+    font-weight: bold;
+    color: #fff;
+    line-height: 25px;
+    cursor: default;
+  }
 
-/*# sourceMappingURL=styles.css.map */
+  .avatar-wrapper {
+    padding: 40px;
+    background: #ccc;
+    cursor: default;
+  }
+
+  a.product-moto {
+    position: absolute;
+    top: 235px;
+    z-index: 2;
+    color: #333;
+    text-shadow: 0 0 2px #fff;
+  }
+
+  li {
+    border-top: 1px solid #eee;
+  }
+
+  a {
+    height: 34px;
+    line-height: 34px;
+    color: #555555;
+  }
+
+  i {
+    margin-right: 10px;
+  }
+}

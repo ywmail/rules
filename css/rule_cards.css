@@ -1,60 +1,51 @@
-.panel {
-  width: 360px;
-  display: inline-block;
-  margin: 10px;
-  border-radius: 0;
+.rule-card {
   cursor: pointer;
 }
-
-.panel:hover {
-  background-color: #d2e6f5 !important;
+.rule-card .card-avatar-content {
+  font-size: 90px;
+  line-height: 110px;
+  text-align: center;
+  color: white;
+  border: 5px solid #fff;
+  width: 100%;
+}
+.rule-card .card-content i {
+  margin-right: 5px;
 }
 
-.panel > .panel-heading {
-  color: #fff;
-  padding: 10px;
-  border-radius: 0;
+.card-redirect-rule .card-up {
+  background-color: #5b9027;
+}
+.card-redirect-rule .card-avatar-content {
+  background: #5b9027;
 }
 
-.panel-redirect-rule {
-  border-color: #5B9027;
-}
-
-.panel-redirect-rule > .panel-heading {
-  background-color: #5B9027;
-  border-color: #5B9027;
-}
-
-.panel-cancel-rule {
-  border-color: #b1240c;
-}
-.panel-cancel-rule > .panel-heading {
+.card-cancel-rule .card-up {
   background-color: #d32a0e;
-  border-color: #b1240c;
+}
+.card-cancel-rule .card-avatar-content {
+  background: #d32a0e;
 }
 
-.panel-replace-rule {
-  border-color: #2A95E7;
+.card-replace-rule .card-up {
+  background-color: #2aa5E7;
+}
+.card-replace-rule .card-avatar-content {
+  background: #2aa5E7;
 }
 
-.panel-replace-rule > .panel-heading {
-  background-color: #2A95E7;
-  border-color: #2A95E7;
-}
-
-.panel-headers-rule {
-  border-color: #dd9d12;
-}
-
-.panel-headers-rule > .panel-heading {
+.card-headers-rule .card-up {
   background-color: #dd9d12;
-  border-color: #dd9d12;
+}
+.card-headers-rule .card-avatar-content {
+  background: #dd9d12;
 }
 
 .back-button {
-  transform: scaleX(-1); /* reverse icon not available in bootstrap glyphicon library */
-  margin-right: 0.5rem;
+  padding: 0 0.5rem;
   color: white;
   text-decoration: none !important;
-  padding: 0 0.5rem;
+  font-size: 14px;
 }
+
+/*# sourceMappingURL=rule_cards.css.map */
