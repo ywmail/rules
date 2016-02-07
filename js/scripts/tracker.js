@@ -10,11 +10,11 @@ RQ.Methods.submitEvent = function(eventObject) {
   });
 };
 
-RQ.Methods.getEventObject = function($el) {
+RQ.Methods.getEventObject = function(el) {
   return {
-    category: $el.attr('data-category'),
-    action: $el.attr('data-action'),
-    label: $el.attr('data-label')
+    category: el.getAttribute('data-category'),
+    action: el.getAttribute('data-action'),
+    label: el.getAttribute('data-label')
   };
 };
 
@@ -27,7 +27,7 @@ RQ.Methods.handleMutation = function(mutation) {
     eventObject;
 
   for (var nodeIndex = 0; nodeIndex < addedNodes.length; nodeIndex++) {
-    eventObject = RQ.Methods.getEventObject($(addedNodes[nodeIndex]));
+    eventObject = RQ.Methods.getEventObject(addedNodes[nodeIndex]);
     RQ.Methods.submitEvent(eventObject);  
   }
 };
