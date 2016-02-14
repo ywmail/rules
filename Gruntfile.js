@@ -8,20 +8,10 @@
 
 module.exports = function (grunt) {
   grunt.initConfig({
-    sass: {                              
-      dist: {                            
-        options: {                       
-          style: 'expanded'
-        },
-        files: {                         
-          'css/index.css': 'sass/index.scss',
-          'css/rule_cards.css': 'sass/rule_cards.scss',
-          'css/editor.css': 'sass/editor.scss',
-          'css/styles.css': 'sass/styles.scss',
-          'css/redirect_rule.css': 'sass/redirect_rule.scss',
-          'css/cancel_rule.css': 'sass/cancel_rule.scss',
-          'css/replace_rule.css': 'sass/replace_rule.scss',
-          'css/headers_rule.css': 'sass/headers_rule.scss'
+    sass: {
+      dist: {
+        files: {
+          'css/main.css': 'sass/main.scss'
         }
       }
     },
