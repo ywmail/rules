@@ -45,6 +45,11 @@
   i {
     margin-right: 10px;
   }
+
+  .ad-container {
+    position: absolute;
+    bottom: 0;
+  }
 }
 
 /* Show SharedLists in Left rail only when body has shared-rules-enabled class */

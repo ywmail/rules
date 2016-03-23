@@ -296,6 +296,9 @@ input[type="text"].form-control {
   color: #555555; }
 .side-nav i {
   margin-right: 10px; }
+.side-nav .ad-container {
+  position: absolute;
+  bottom: 0; }
 
 /* Show SharedLists in Left rail only when body has shared-rules-enabled class */
 body.shared-rules-enabled li.shared-lists-heading {
