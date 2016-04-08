@@ -160,6 +160,16 @@ input[type="text"] {
   line-height: 35px;
   background: #3c3c3c;
   color: #eee;
+
+  .right-icon-group {
+    float: right;
+    margin-right: 5px;
+
+    a {
+      margin: 0;
+      padding: 3px 20px;
+    }
+  }
 }
 
 .footer .rq-blue {

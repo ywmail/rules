@@ -129,6 +129,12 @@ input[type="text"].form-control {
   line-height: 35px;
   background: #3c3c3c;
   color: #eee; }
+  .footer .right-icon-group {
+    float: right;
+    margin-right: 5px; }
+    .footer .right-icon-group a {
+      margin: 0;
+      padding: 3px 20px; }
 
 .footer .rq-blue {
   margin: 0; }
