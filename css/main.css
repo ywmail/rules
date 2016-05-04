@@ -1,22 +1,3 @@
-/* Temporary Styling for Rules Number Badge */
-.rules-number.badge {
-  background-color: #4285F4;
-  border-radius: 0;
-  height: 25px;
-  width: 25px;
-  line-height: 20px;
-  padding-left: 5px; }
-
-body {
-  background: #ededeb; }
-
-a:hover {
-  color: inherit;
-  text-decoration: none; }
-
-table {
-  width: 100%; }
-
 @media only screen and (max-width: 1040px) {
   .side-nav.fixed {
     left: -105%; }
@@ -36,6 +17,25 @@ table {
 
   #footer {
     margin: auto; } }
+@media (max-height: 600px) {
+  div.ad-container {
+    display: none; }
+
+  div.social-sec {
+    display: none; } }
+@media (min-height: 600px) and (max-height: 700px) {
+  div.social-sec {
+    display: none; } }
+body {
+  background: #ededeb; }
+
+a:hover {
+  color: inherit;
+  text-decoration: none; }
+
+table {
+  width: 100%; }
+
 .dropdown-menu {
   min-width: 100px;
   padding: 0; }

@@ -1,15 +1,5 @@
 @import 'variables';
 
-/* Temporary Styling for Rules Number Badge */
-.rules-number.badge {
-  background-color: #4285F4;
-  border-radius: 0;
-  height: 25px;
-  width: 25px;
-  line-height: 20px;
-  padding-left: 5px;
-}
-
 body {
   background: #ededeb;
 }
@@ -21,33 +11,6 @@ a:hover {
 
 table {
   width: 100%;
-}
-
-@media only screen and (max-width: 1040px) {
-  .side-nav.fixed {
-    left: -105%;
-  }
-
-  #page {
-    left: 0;
-  }
-
-  #content {
-    width: $content-width;
-    margin: auto;
-  }
-
-  div.backdrop {
-    left: 0;
-  }
-
-  div.backdrop-message {
-    margin-left: -350px;
-  }
-
-  #footer {
-    margin: auto;
-  }
 }
 
 .dropdown-menu {

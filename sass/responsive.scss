@@ -1,0 +1,46 @@
+@import 'variables';
+
+@media only screen and (max-width: 1040px) {
+  // Hide left rail
+  .side-nav.fixed {
+    left: -105%;
+  }
+
+  // Shift Page to entire left
+  #page {
+    left: 0;
+  }
+
+  #content {
+    width: $content-width;
+    margin: auto;
+  }
+
+  div.backdrop {
+    left: 0;
+  }
+
+  div.backdrop-message {
+    margin-left: -350px;
+  }
+
+  #footer {
+    margin: auto;
+  }
+}
+
+@media (max-height: 600px) {
+  div.ad-container {
+    display: none;
+  }
+
+  div.social-sec {
+    display: none;
+  }
+}
+
+@media (min-height: 600px) and (max-height: 700px) {
+  div.social-sec {
+    display: none;
+  }
+}
