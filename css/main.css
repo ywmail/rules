@@ -227,6 +227,12 @@ input[type="text"].form-control {
   position: absolute;
   bottom: 0;
   width: 100%; }
+  .side-nav .ad-container.payoneer-ad {
+    bottom: 60px;
+    width: 240px;
+    height: 250px; }
+    .side-nav .ad-container.payoneer-ad a {
+      padding: 0 !important; }
 .side-nav .pledgie-campaign {
   padding: 20px 0; }
   .side-nav .pledgie-campaign .pledgie-message {
