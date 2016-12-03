@@ -215,8 +215,6 @@ input[type="text"].form-control {
   text-shadow: 0 0 2px #fff; }
 .side-nav li {
   border-top: 1px solid #eee; }
-.side-nav li.shared-lists-heading {
-  display: none; }
 .side-nav a {
   height: 34px;
   line-height: 34px;
@@ -237,9 +235,5 @@ input[type="text"].form-control {
   padding: 20px 0; }
   .side-nav .pledgie-campaign .pledgie-message {
     font-size: 12px; }
-
-/* Show SharedLists in Left rail only when body has shared-rules-enabled class */
-body.shared-rules-enabled li.shared-lists-heading {
-  display: list-item; }
 
 /*# sourceMappingURL=main.css.map */
