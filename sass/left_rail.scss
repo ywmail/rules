@@ -32,10 +32,6 @@
     border-top: 1px solid #eee;
   }
 
-  li.shared-lists-heading {
-    display: none;
-  }
-
   a {
     height: 34px;
     line-height: 34px;
@@ -68,12 +64,5 @@
     .pledgie-message {
       font-size: 12px;
     }
-  }
-}
-
-/* Show SharedLists in Left rail only when body has shared-rules-enabled class */
-body.shared-rules-enabled {
-  li.shared-lists-heading {
-    display: list-item;
   }
 }
