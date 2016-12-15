@@ -236,7 +236,8 @@ input[type="text"].form-control {
     width: 240px;
     text-align: center; }
     .side-nav .ad-container.udemy li {
-      border-top: 0; }
+      border-top: 0;
+      display: list-item !important; }
       .side-nav .ad-container.udemy li:hover {
         background: none; }
     .side-nav .ad-container.udemy li.ad-heading i {
