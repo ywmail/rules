@@ -58,7 +58,7 @@
     }
 
     &.udemy {
-      height: 238px;
+      height: 255px;
       width: 240px;
       text-align: center;
 
@@ -70,6 +70,14 @@
         }
       }
 
+      li.ad-heading {
+        i {
+          color: gold;
+          font-size: 16px;
+          margin-right: 0;
+          vertical-align: bottom;
+        }
+      }
       li.text-ad {
         height: 25px;
 

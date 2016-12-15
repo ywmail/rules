@@ -232,13 +232,18 @@ input[type="text"].form-control {
     .side-nav .ad-container.payoneer-ad a {
       padding: 0 !important; }
   .side-nav .ad-container.udemy {
-    height: 238px;
+    height: 255px;
     width: 240px;
     text-align: center; }
     .side-nav .ad-container.udemy li {
       border-top: 0; }
       .side-nav .ad-container.udemy li:hover {
         background: none; }
+    .side-nav .ad-container.udemy li.ad-heading i {
+      color: gold;
+      font-size: 16px;
+      margin-right: 0;
+      vertical-align: bottom; }
     .side-nav .ad-container.udemy li.text-ad {
       height: 25px; }
       .side-nav .ad-container.udemy li.text-ad a {
