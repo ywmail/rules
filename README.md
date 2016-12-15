@@ -1,2 +1,2 @@
-# web
-Requestly Web is taking Requestly to web out of chrome extension ecosystem.
+# Site Purpose
+This repository contains UI for rendering requestly rules and other views.
