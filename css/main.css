@@ -224,30 +224,31 @@ input[type="text"].form-control {
 .side-nav .ad-container {
   position: fixed;
   bottom: 0;
-  width: 100%; }
-  .side-nav .ad-container.udemy {
-    height: 255px;
-    width: 240px;
-    text-align: center; }
-    .side-nav .ad-container.udemy li {
-      border-top: 0;
-      display: list-item !important; }
-      .side-nav .ad-container.udemy li:hover {
-        background: none; }
-    .side-nav .ad-container.udemy li.ad-heading i {
-      color: gold;
-      font-size: 16px;
-      margin-right: 0;
-      vertical-align: bottom; }
-    .side-nav .ad-container.udemy li.text-ad {
-      height: 25px; }
-      .side-nav .ad-container.udemy li.text-ad a {
-        padding: 0; }
-    .side-nav .ad-container.udemy li.image-ad a {
-      padding: 5px; }
-      .side-nav .ad-container.udemy li.image-ad a img {
-        height: 175px;
-        width: 230px; }
+  width: 240px;
+  height: 240px; }
+.side-nav .ad-container.udemy {
+  height: 255px;
+  width: 240px;
+  text-align: center; }
+  .side-nav .ad-container.udemy li {
+    border-top: 0;
+    display: list-item !important; }
+    .side-nav .ad-container.udemy li:hover {
+      background: none; }
+  .side-nav .ad-container.udemy li.ad-heading i {
+    color: gold;
+    font-size: 16px;
+    margin-right: 0;
+    vertical-align: bottom; }
+  .side-nav .ad-container.udemy li.text-ad {
+    height: 25px; }
+    .side-nav .ad-container.udemy li.text-ad a {
+      padding: 0; }
+  .side-nav .ad-container.udemy li.image-ad a {
+    padding: 5px; }
+    .side-nav .ad-container.udemy li.image-ad a img {
+      height: 175px;
+      width: 230px; }
 .side-nav .pledgie-campaign {
   padding: 20px 0; }
   .side-nav .pledgie-campaign .pledgie-message {
