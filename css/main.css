@@ -226,6 +226,8 @@ input[type="text"].form-control {
   bottom: 0;
   width: 240px;
   height: 240px; }
+.side-nav .ad-container.adsense {
+  overflow: hidden; }
 .side-nav .ad-container.udemy {
   height: 255px;
   width: 240px;
