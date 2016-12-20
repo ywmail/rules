@@ -101,7 +101,7 @@ input[type="text"].form-control {
 .content {
   width: 100%;
   min-width: 800px;
-  height: calc(100% - 35px);
+  height: calc(100% - 60px);
   background: #fff;
   overflow: auto; }
 
@@ -130,8 +130,8 @@ input[type="text"].form-control {
   width: 100%;
   overflow: hidden;
   text-align: center;
-  height: 35px;
-  line-height: 35px;
+  height: 60px;
+  line-height: 60px;
   background: #3c3c3c;
   color: #eee; }
   .footer .right-icon-group {
@@ -139,10 +139,10 @@ input[type="text"].form-control {
     margin-right: 5px; }
     .footer .right-icon-group a {
       margin: 0;
-      padding: 3px 20px; }
-
-.footer .rq-blue {
-  margin: 0; }
+      margin-right: 5px;
+      padding: 3px 15px; }
+  .footer .rq-blue {
+    margin: 0; }
 
 .footer-title {
   margin-right: 5px;
@@ -225,12 +225,6 @@ input[type="text"].form-control {
   position: fixed;
   bottom: 0;
   width: 100%; }
-  .side-nav .ad-container.payoneer-ad {
-    bottom: 60px;
-    width: 240px;
-    height: 250px; }
-    .side-nav .ad-container.payoneer-ad a {
-      padding: 0 !important; }
   .side-nav .ad-container.udemy {
     height: 255px;
     width: 240px;

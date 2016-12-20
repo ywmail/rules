@@ -91,7 +91,7 @@ input[type="text"] {
 .content {
   width: 100%;
   min-width: $content-width;
-  height: calc(100% - 35px);
+  height: calc(100% - #{$footer-height});
   background: #fff;
   overflow: auto;
 }
@@ -125,8 +125,8 @@ input[type="text"] {
   width: 100%;
   overflow: hidden;
   text-align: center;
-  height: 35px;
-  line-height: 35px;
+  height: $footer-height;
+  line-height: $footer-height;
   background: #3c3c3c;
   color: #eee;
 
@@ -136,13 +136,14 @@ input[type="text"] {
 
     a {
       margin: 0;
-      padding: 3px 20px;
+      margin-right: 5px;
+      padding: 3px 15px;
     }
   }
-}
 
-.footer .rq-blue {
-  margin: 0;
+  .rq-blue {
+    margin: 0;
+  }
 }
 
 .footer-title {
