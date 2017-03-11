@@ -126,29 +126,6 @@ input[type="text"].form-control {
   .backdrop-message p {
     font-size: 16px; }
 
-.footer {
-  width: 100%;
-  overflow: hidden;
-  text-align: center;
-  height: 60px;
-  line-height: 60px;
-  background: #3c3c3c;
-  color: #eee; }
-  .footer .right-icon-group {
-    float: right;
-    margin-right: 5px; }
-    .footer .right-icon-group a {
-      margin: 0;
-      margin-right: 5px;
-      padding: 3px 15px; }
-  .footer .rq-blue {
-    margin: 0; }
-
-.footer-title {
-  margin-right: 5px;
-  padding: 5px 10px;
-  font-size: 14px; }
-
 .right {
   float: right; }
 

@@ -121,37 +121,6 @@ input[type="text"] {
   }
 }
 
-.footer {
-  width: 100%;
-  overflow: hidden;
-  text-align: center;
-  height: $footer-height;
-  line-height: $footer-height;
-  background: #3c3c3c;
-  color: #eee;
-
-  .right-icon-group {
-    float: right;
-    margin-right: 5px;
-
-    a {
-      margin: 0;
-      margin-right: 5px;
-      padding: 3px 15px;
-    }
-  }
-
-  .rq-blue {
-    margin: 0;
-  }
-}
-
-.footer-title {
-  margin-right: 5px;
-  padding: 5px 10px;
-  font-size: 14px;
-}
-
 .right {
   float: right;
 }
