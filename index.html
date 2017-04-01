@@ -7,17 +7,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="icon" type="image/x-icon" href="favicon.ico"/>
 
-    <!-- Facebook SDK -->
-    <!--
-    <div id="fb-root"></div>
-    <script>(function(d, s, id) {
-      var js, fjs = d.getElementsByTagName(s)[0];
-      if (d.getElementById(id)) return;
-      js = d.createElement(s); js.id = id;
-      js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.5";
-      fjs.parentNode.insertBefore(js, fjs);
-    }(document, 'script', 'facebook-jssdk'));</script>
-    -->
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+          (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+      ga('create', 'UA-46800996-7', 'auto');
+      ga('require', 'GTM-KN4N9B7');
+      ga('send', 'pageview');
+    </script>
+
+    <style>.async-hide { opacity: 0 !important} </style>
+    <script>(function(a,s,y,n,c,h,i,d,e){s.className+=' '+y;h.start=1*new Date;
+      h.end=i=function(){s.className=s.className.replace(RegExp(' ?'+y),'')};
+      (a[n]=a[n]||[]).hide=h;setTimeout(function(){i();h.end=null},c);h.timeout=c;
+    })(window,document.documentElement,'async-hide','dataLayer',4000,
+      {'GTM-KN4N9B7':true});</script>
 
     <!-- Material Design Icons -->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
@@ -69,14 +74,6 @@
           </ul>
       </div>
 
-      <!--
-      <div class="pledgie-campaign">
-        <a href='https://pledgie.com/campaigns/31365' target="_blank">
-          <img alt='Click here to lend your support to: Requestly and make a donation at pledgie.com !' src='https://pledgie.com/campaigns/31365.png?skin_name=chrome' border='0' >
-        </a>
-      </div>
-      -->
-
       <!-- Side Navigation Links -->
       <ul class="collapsible collapsible-accordion">
           <li><a class="collapsible-header waves-effect" href="#">
@@ -93,18 +90,7 @@
       </ul>
 
       <!-- Google Adsense -->
-      <div class="ad-container adsense">
-        <!-- Requestly Left Rail 240x300
-        <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-        <ins class="adsbygoogle"
-             style="display:inline-block;width:240px;height:300px"
-             data-ad-client="ca-pub-4094829842104560"
-             data-ad-slot="9861389537"></ins>
-        <script>
-        (adsbygoogle = window.adsbygoogle || []).push({});
-        </script>
-        -->
-
+      <div id="ad-container" class="ad-container adsense">
         <!-- Requestly Left Rail 300x250 -->
         <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
         <ins class="adsbygoogle"
@@ -115,28 +101,6 @@
           (adsbygoogle = window.adsbygoogle || []).push({});
         </script>
       </div>
-
-      <!--
-      <ul class="ad-container udemy">
-        <li class="ad-heading">
-          <h6>Udemy Course for $15&nbsp;<strike>$200</strike>
-            <br/>
-            92% OFF
-            <i class="material-icons">star</i>
-            <i class="material-icons">star</i>
-            <i class="material-icons">star</i>
-            <i class="material-icons">star</i>
-            <i class="material-icons">star_border</i>
-          </h6>
-        </li>
-        <li class="text-ad">
-          <a href="http://click.linksynergy.com/link?id=uXoM8idr6XM&offerid=323058.756150&type=2&murl=https%3A%2F%2Fwww.udemy.com%2Fthe-complete-guide-to-angular-2%2F">Angular 2 - The Complete Guide</a><IMG border=0 width=1 height=1 src="http://ad.linksynergy.com/fs-bin/show?id=uXoM8idr6XM&bids=323058.756150&type=2&subid=0" >
-        </li>
-        <li class="image-ad">
-          <a href="http://click.linksynergy.com/link?id=uXoM8idr6XM&offerid=323058.756150&type=2&murl=https%3A%2F%2Fwww.udemy.com%2Fthe-complete-guide-to-angular-2%2F"><IMG border=0 src="https://udemy-images.udemy.com/course/480x270/756150_c033.jpg" ></a><IMG border=0 width=1 height=1 src="http://ad.linksynergy.com/fs-bin/show?id=uXoM8idr6XM&bids=323058.756150&type=2&subid=0" >
-        </li>
-      </ul>
-      -->
     </ul>
     <!-- End of Left Navigation -->
     
@@ -182,24 +146,6 @@
       }
     </script>
     -->
-
-    <!-- Google Analytics Script -->
-    <script>
-      (function(i, s, o, g, r, a, m) {
-        i['GoogleAnalyticsObject'] = r;
-        i[r] = i[r] || function() {
-            (i[r].q = i[r].q || []).push(arguments)
-        }, i[r].l = 1 * new Date();
-        a = s.createElement(o),
-            m = s.getElementsByTagName(o)[0];
-        a.async = 1;
-        a.src = g;
-        m.parentNode.insertBefore(a, m)
-      })(window, document, 'script', 'libs/analytics.js', 'ga');
-
-      ga('create', 'UA-46800996-7', 'auto');
-      // ga('send', 'pageview');
-    </script>
 
     <script type="text/javascript" src="js/scripts/tracker.js"></script>
   </body>
