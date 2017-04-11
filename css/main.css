@@ -84,7 +84,7 @@ input[type="text"].form-control {
   transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s; }
 
 .header {
-  background: #2F416E;
+  background: #337ab7;
   height: 45px;
   line-height: 45px;
   font-size: 14px;
@@ -155,8 +155,13 @@ input[type="text"].form-control {
 .content .rule-body {
   padding: 16px; }
 
-.margin-r-0-5 {
-  margin-right: 0.5rem; }
+.extension-installation-msg-panel {
+  width: 50%;
+  position: fixed;
+  top: 20%;
+  left: 30%; }
+  .extension-installation-msg-panel .panel-footer {
+    text-align: center; }
 
 /* Left Navigation Bar */
 .side-nav a.product-name {

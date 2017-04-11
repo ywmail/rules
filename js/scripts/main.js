@@ -13,17 +13,21 @@ RQ.Methods.getBrowser = function() {
 };
 
 RQ.Methods.populateEmptyRulesArea = function() {
-  var browser = RQ.Methods.getBrowser();
+  var browser = RQ.Methods.getBrowser(),
+    installButton;
 
   switch (browser) {
     case 'firefox':
-      console.log('Browser is firefox');
       break;
     case 'chrome':
-      console.log('Browser is chrome');
+      installButton = document.getElementById('firefox-install-btn');
+      installButton.setAttribute('disabled', true);
+      installButton.removeAttribute('href');
       break;
     default:
-      console.log('Unsupported browser');
+      installButton = document.getElementById('firefox-install-btn');
+      installButton.setAttribute('disabled', true);
+      installButton.removeAttribute('href');
   }
 };
 

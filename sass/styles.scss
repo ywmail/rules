@@ -72,7 +72,7 @@ input[type="text"] {
 }
 
 .header {
-  background: #2F416E;
+  background: $header-color;
   height: 45px;
   line-height: 45px;
   font-size: 14px;
@@ -157,8 +157,13 @@ input[type="text"] {
   padding: 16px;
 }
 
-.margin-r-0-5 {
-  margin-right: 0.5rem;
+.extension-installation-msg-panel {
+  width: 50%;
+  position: fixed;
+  top: 20%;
+  left: 30%;
+
+  .panel-footer {
+    text-align: center;
+  }
 }
-
-
