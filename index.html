@@ -31,11 +31,6 @@
     })(window,document.documentElement,'async-hide','dataLayer',4000,
       {'GTM-KN4N9B7':true});</script>
 
-    <!-- Material Design Icons -->
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    
-    <!-- Material Design Icons -->
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
@@ -116,17 +111,28 @@
     <!-- End of Left Navigation -->
     
     <div id="page" class="page">
+      <div id="content" class="content">
+        <div class="header">
+          <img src="resources/images/38x38.png" class="icon-requestly">
+          <span class="rq-white">Requestly</span>
+          <span class="rq-dash"> - </span>
+          <span class="rq-line">Play with Network Requests</span>
+        </div>
 
-      <!--<div class="header">
-        <img src="resources/images/38x38.png" class="icon-requestly">
-        <span class="rq-white">Request</span>
-        <span class="rq-blue">ly</span>
-        <span class="rq-dash"> - </span>
-        <span class="rq-line">Play with Network Requests</span>
-      </div>-->
-
-      <div id="content" class="content"></div>
-      <iframe class="footer-container" src="/footer" style="border:none; width: 100%"></iframe>
+        <!--Panel-->
+        <div class="panel panel-primary extension-installation-msg-panel">
+          <div class="panel-heading">Install Requestly</div>
+          <div class="panel-body">Please install requestly extension to setup rules to modify network requests</div>
+          <div class="panel-footer">
+            <a class="btn btn-info waves-effect waves-light" id="chrome-install-btn" target="_blank"
+               href="https://chrome.google.com/webstore/detail/requestly/mdnleldcmiljblolnjhpnblkcekpdkpa">Chrome</a>
+            <a class="btn btn-warning waves-effect waves-light" id="firefox-install-btn"
+                href="https://static-content-1702d.firebaseapp.com/requestly/firefox/requestly-latest.xpi">Firefox</a>
+          </div>
+        </div>
+        <!--/.Panel-->
+      </div>
+      <iframe class="footer-container" src="http://www.requestly.in/footer" style="border:none; width: 100%"></iframe>
     </div>
 
     <div id="extension-disable-backdrop" class="backdrop modal-backdrop"></div>
@@ -159,5 +165,6 @@
     -->
 
     <script type="text/javascript" src="js/scripts/tracker.js"></script>
+    <script type="text/javascript" src="js/scripts/main.js"></script>
   </body>
 </html>
