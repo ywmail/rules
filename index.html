@@ -152,23 +152,27 @@
     </div>
 
     <div id="events-observer-placeholder"></div>
-
     <div id="modal-container"></div>
-
-    <!-- Show backdrop with message if adblocker is enabled on the site -->
-    <!--
-    <script src="js/scripts/showads.js"></script>
-    <script>
-      if (!window.canShowAds) {
-        // adblocker detected, show message
-        // http://stackoverflow.com/questions/4869154/how-to-detect-adblock-on-my-website
-        document.getElementById('adblock-disable-backdrop').style.display = 'block';
-        document.getElementById('adblock-disable-backdrop-message').style.display = 'block';
-      }
-    </script>
-    -->
 
     <script type="text/javascript" src="js/scripts/tracker.js"></script>
     <script type="text/javascript" src="js/scripts/main.js"></script>
+    <script src="js/scripts/showads.js"></script>
+    <script>
+      if (!window.canShowAds) {
+        // Adblocker detected, show message
+        // http://stackoverflow.com/questions/4869154/how-to-detect-adblock-on-my-website
+        RQ.Methods.submitEvent({
+          category: 'rules page',
+          action: 'page viewed',
+          label: 'rules page viewed with ads blocked'
+        });
+      } else {
+        RQ.Methods.submitEvent({
+          category: 'rules page',
+          action: 'page viewed',
+          label: 'rules page viewed with ads enabled'
+        });
+      }
+    </script>
   </body>
 </html>
