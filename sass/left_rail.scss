@@ -1,5 +1,7 @@
 /* Left Navigation Bar */
 .side-nav {
+  width: 300px !important;
+
   a.product-name {
     padding-top: 10px;
     padding-bottom: 10px;
@@ -15,7 +17,7 @@
   }
 
   .avatar-wrapper {
-    padding: 40px;
+    padding: 20px 60px;
     background: #ccc;
     cursor: default;
   }
@@ -45,7 +47,7 @@
   .ad-container {
     position: fixed;
     bottom: 0;
-    width: 240px;
+    width: 300px;
     height: 240px;
   }
 
