@@ -1,9 +1,0 @@
-{
-  "name": "Requestly",
-  "package_path" : "http://web.requestly.in/firefox/package.zip",
-  "version": "4.1.5",
-  "developer": {
-    "name": "Sachin Jain",
-    "url": "http://github.com/sachinjain024"
-  }
-}
