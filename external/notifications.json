@@ -6,7 +6,7 @@
       "label": "Blog Post",
       "heading": "Shortcut to download youtube videos",
       "contentType": "para",
-      "content": "Learn how to download youtube videos using Keepvid and Redirect Rule"
+      "content": "Learn how to download youtube videos using Keepvid and Redirect Rule. <a href='http://www.requestly.in'>Home</a>"
     },
     {
       "id": 0,
@@ -14,10 +14,10 @@
       "label": "Whats new",
       "version": "5.0.0",
       "heading": "Latest in Requestly v5.0",
-      "contentType": "orderedList",
+      "contentType": "list",
       "content": [
-        "UserAgent Modification: New Ruletype to modify user agent on selective websites",
-        "Requestly Library: Host your local js,css files using Requestly library"
+        "<u>UserAgent Modification</u>: New Ruletype to modify user agent on selective websites",
+        "<u>Requestly Library</u>: Host your local js,css files using Requestly library"
       ]
     }
   ]
