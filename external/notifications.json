@@ -1,7 +1,7 @@
 {
   "items": [
     {
-      "id": 1,
+      "id": 2,
       "type": "primary",
       "label": "Blog Post",
       "heading": "Shortcut to download youtube videos",
@@ -9,7 +9,7 @@
       "content": "Learn how to download youtube videos using Keepvid and Redirect Rule. <a class='link-inside-notification' href='http://www.requestly.in'>Home</a>"
     },
     {
-      "id": 0,
+      "id": 1,
       "type": "info",
       "label": "Whats new",
       "version": "5.0.0",
