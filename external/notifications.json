@@ -11,14 +11,10 @@
     {
       "id": 1,
       "type": "info",
-      "label": "Whats new",
-      "version": "5.0.0",
-      "heading": "Latest in Requestly v5.0",
-      "contentType": "list",
-      "content": [
-        "<u>UserAgent Modification</u>: New Ruletype to modify user agent on selective websites",
-        "<u>Requestly Library</u>: Host your local js,css files using Requestly library"
-      ]
+      "label": "New Feature",
+      "heading": "Introducing UserAgent Modification",
+      "contentType": "para",
+      "content": "Setup UserAgent rule to test different web pages with different user agents"
     }
   ]
 }
