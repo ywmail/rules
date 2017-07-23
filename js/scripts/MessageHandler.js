@@ -1,8 +1,10 @@
 window.RQ = window.RQ || {};
 
 RQ.MessageHandler = {
+  eventCallbackMap: {},
+
   configs: {
-    isLoggingEnabled: true
+    isLoggingEnabled: false
   },
 
   constants: {
@@ -14,11 +16,21 @@ RQ.MessageHandler = {
     ACTION_USER_LOGGED_IN: 'user:loggedIn'
   },
 
-  sendMessage: function(message) {
-    if (!message.action && !message.event) {
-      this.isLoggingEnabled && console.error('Invalid message. Must contain some action or event');
+  addMessageListener: function() {
+    window.addEventListener('message', this.handleMessageReceived.bind(this));
+  },
+
+  registerCallback: function(action, callback) {
+    this.eventCallbackMap[action] = callback;
+  },
+
+  sendMessage: function(message, callback) {
+    if (!message.action) {
+      this.isLoggingEnabled && console.error('Invalid message. Must contain some action');
       return;
     }
+
+    this.eventCallbackMap[message.action] = callback;
 
     message[this.constants.SOURCE_FIELD] = this.constants.PAGE_SCRIPT;
     window.postMessage(message, this.constants.DOMAIN);
@@ -30,22 +42,18 @@ RQ.MessageHandler = {
     if (event && event.data && event.data.source === this.constants.CONTENT_SCRIPT) {
       this.isLoggingEnabled && console.log('Received message: ', event.data);
 
-      if (event.data.action === 'login') {
+      if (event.data.action === 'authenticate') {
         RQ.DataStore.loginWithGoogle().then(function(result) {
-          that.sendMessage({ action: that.constants.ACTION_USER_LOGGED_IN })
+          that.sendMessage({ action: event.data.action, response: result.user.providerData[0] })
         }).catch(function(error) {
           console.error('Error signing in', error);
         });
       }
 
       if (event.data.action === 'check:userAuthenticated') {
-        that.sendMessage({ action: 'check:userAuthenticated', response: RQ.DataStore.isUserAuthenticated() })
+        that.sendMessage({ action: event.data.action, response: RQ.DataStore.isUserAuthenticated() })
       }
     }
-  },
-
-  addMessageListener: function() {
-    window.addEventListener('message', this.handleMessageReceived.bind(this));
   },
 
   init: function() {
