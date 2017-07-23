@@ -24,12 +24,14 @@
       ga('send', 'pageview');
     </script>
 
+    <!--
     <style>.async-hide { opacity: 0 !important} </style>
     <script>(function(a,s,y,n,c,h,i,d,e){s.className+=' '+y;h.start=1*new Date;
       h.end=i=function(){s.className=s.className.replace(RegExp(' ?'+y),'')};
       (a[n]=a[n]||[]).hide=h;setTimeout(function(){i();h.end=null},c);h.timeout=c;
     })(window,document.documentElement,'async-hide','dataLayer',4000,
       {'GTM-KN4N9B7':true});</script>
+    -->
 
 
     <!-- Font Awesome -->
@@ -153,6 +155,20 @@
 
     <div id="events-observer-placeholder"></div>
     <div id="modal-container"></div>
+
+    <script src="libs/firebase-4.1.3.js"></script>
+    <script>
+      // Initialize Firebase
+      var config = {
+        apiKey: "AIzaSyC2WOxTtgKH554wCezEJ4plxnMNXaUSFXY",
+        authDomain: "requestly.firebaseapp.com",
+        databaseURL: "https://requestly.firebaseio.com",
+        projectId: "project-7820168409702389920",
+        storageBucket: "project-7820168409702389920.appspot.com",
+        messagingSenderId: "911299702852"
+      };
+      firebase.initializeApp(config);
+    </script>
 
     <script type="text/javascript" src="js/scripts/tracker.js"></script>
     <script type="text/javascript" src="js/scripts/main.js"></script>
