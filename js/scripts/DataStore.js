@@ -14,8 +14,20 @@ window.RQ = window.RQ || {};
       return firebase.auth().signInWithPopup(provider);
     },
     
-    isUserAuthenticated: function () {
+    isUserAuthenticated: function() {
       return firebase.auth().currentUser !== null;
+    },
+
+    getNodeRef: function(pathArray) {
+      return firebase.database().ref(pathArray.join('/'))
+    },
+
+    getValue: function(pathArray, callback) {
+      var nodeRef = this.getNodeRef(pathArray);
+
+      nodeRef.once('value', function(snapshot) {
+        callback.call(null, snapshot.val())
+      });
     }
   };
 }(RQ));

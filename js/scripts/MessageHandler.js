@@ -44,7 +44,12 @@ RQ.MessageHandler = {
 
       if (event.data.action === 'authenticate') {
         RQ.DataStore.loginWithGoogle().then(function(result) {
-          that.sendMessage({ action: event.data.action, response: result.user.providerData[0] })
+          var userProfile = Object.assign({}, result.user.providerData[0]);
+
+          // Update uid inside providerData to user's uid
+          userProfile.uid = result.user.uid;
+
+          that.sendMessage({ action: event.data.action, response: userProfile });
         }).catch(function(error) {
           console.error('Error signing in', error);
         });
@@ -52,6 +57,12 @@ RQ.MessageHandler = {
 
       if (event.data.action === 'check:userAuthenticated') {
         that.sendMessage({ action: event.data.action, response: RQ.DataStore.isUserAuthenticated() })
+      }
+
+      if (event.data.action === 'getValue') {
+        RQ.DataStore.getValue(event.data.pathArray, function(value) {
+          that.sendMessage({ action: event.data.action, response: value })
+        });
       }
     }
   },
