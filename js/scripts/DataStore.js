@@ -16,6 +16,23 @@ window.RQ = window.RQ || {};
       return firebase.auth().signInWithPopup(provider);
     },
 
+    checkAuthenticationOnPageLoad: function(callback) {
+      var currentUser = firebase.auth().currentUser,
+        that = this;
+
+      if (currentUser !== null) {
+        callback.call(null, this.getAuthData(currentUser))
+      } else {
+        firebase.auth().onAuthStateChanged(function(user) {
+          if (user) {
+            callback.call(null, that.getAuthData(user))
+          } else {
+            callback.call(null, null);
+          }
+        });
+      }
+    },
+
     getAuthData: function(user) {
       var userProfile = Object.assign({}, user.providerData[0]);
 
@@ -24,7 +41,7 @@ window.RQ = window.RQ || {};
 
       return userProfile;
     },
-    
+
     isUserAuthenticated: function() {
       return firebase.auth().currentUser !== null ? this.getAuthData(firebase.auth().currentUser) : null;
     },

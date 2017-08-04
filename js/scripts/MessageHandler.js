@@ -51,7 +51,15 @@ RQ.MessageHandler = {
       }
 
       if (event.data.action === 'check:userAuthenticated') {
-        that.sendMessage({ action: event.data.action, response: RQ.DataStore.isUserAuthenticated() })
+        // Firebase doesn't tell user authState in synchronous manner so on page load we need to attach listener
+        // While at other instances we can query user state
+        if (event.data.checkOnPageLoad) {
+          RQ.DataStore.checkAuthenticationOnPageLoad(function(authData) {
+            that.sendMessage({ action: event.data.action, response: authData })
+          });
+        } else {
+          that.sendMessage({ action: event.data.action, response: RQ.DataStore.isUserAuthenticated() })
+        }
       }
 
       if (event.data.action === 'getValue') {
