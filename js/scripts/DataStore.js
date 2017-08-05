@@ -62,6 +62,10 @@ window.RQ = window.RQ || {};
       var nodeRef = this.getNodeRef(pathArray);
 
       nodeRef.set(value, callback);
+    },
+
+    logout: function(callback) {
+      return firebase.auth().signOut();
     }
   };
 }(RQ));
