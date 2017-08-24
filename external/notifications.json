@@ -1,12 +1,20 @@
 {
   "items": [
     {
+      "id": 3,
+      "type": "primary",
+      "label": "Blog Post",
+      "heading": "Permissions needed by Requestly",
+      "contentType": "para",
+      "content": "Learn what are the permissions required in Requestly and why ?. <a class='link-inside-notification' href='http://www.requestly.in/content/articles/requestly-permissions-list/'>Read Here</a>"
+    },
+    {
       "id": 2,
       "type": "primary",
       "label": "Blog Post",
       "heading": "Shortcut to download youtube videos",
       "contentType": "para",
-      "content": "Learn how to download youtube videos using Keepvid and Redirect Rule. <a class='link-inside-notification' href='http://www.requestly.in'>Home</a>"
+      "content": "Learn how to download youtube videos using Keepvid and Redirect Rule. <a class='link-inside-notification' href='http://www.requestly.in/content/articles/download-youtube-videos-trick/'>Learn Trick</a>"
     },
     {
       "id": 1,
