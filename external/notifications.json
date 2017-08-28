@@ -1,6 +1,14 @@
 {
   "items": [
     {
+      "id": 4,
+      "type": "primary",
+      "label": "Blog Post",
+      "heading": "Change youtube home to youtube subscriptions",
+      "contentType": "para",
+      "content": "Learn how to change your youtube home to subscriptions using Redirect Rule. <a class='link-inside-notification' href='https://medium.com/@requestly_ext/change-youtube-home-page-to-subscriptions-ce619064d8f9'>Read here</a>"
+    },
+    {
       "id": 3,
       "type": "primary",
       "label": "Blog Post",
@@ -15,14 +23,6 @@
       "heading": "Shortcut to download youtube videos",
       "contentType": "para",
       "content": "Learn how to download youtube videos using Keepvid and Redirect Rule. <a class='link-inside-notification' href='http://www.requestly.in/content/articles/download-youtube-videos-trick/'>Learn Trick</a>"
-    },
-    {
-      "id": 1,
-      "type": "info",
-      "label": "New Feature",
-      "heading": "Introducing UserAgent Modification",
-      "contentType": "para",
-      "content": "Setup UserAgent rule to test different web pages with different user agents"
     }
   ]
 }
